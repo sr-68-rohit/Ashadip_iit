@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,10 +9,11 @@
     <link rel="stylesheet" href="css/all.min.css" type="text/css">
     <link rel="stylesheet" href="font/Poppins/stylesheet.css" type="text/css">
     <style>
-        .banner{
+        .banner {
             z-index: 9;
         }
-        .banner::after{
+
+        .banner::after {
             content: "";
             background: url(./image/Ellipse\ 6.png);
             position: absolute;
@@ -23,7 +25,8 @@
             background-size: contain;
             background-repeat: no-repeat;
         }
-        .banner::before{
+
+        .banner::before {
             content: "";
             background: url(./image/Ellipse\ 5.png);
             position: absolute;
@@ -35,20 +38,25 @@
             background-size: contain;
             background-repeat: no-repeat;
         }
-        h1::after{
+
+        h1::after {
             content: "About Us";
             color: #AC796C1A;
             font-size: 150px;
             font-weight: 800;
             position: absolute;
-            top: 21%;
-            left: 24%;
+            top: 24%;
+            left: 32%;
         }
-       
+        .about-content{
+            border: 2px solid ;
+            border-image: linear-gradient(90deg,#2F201C,#2f201c00);
+            border-image-slice: 1;
+        }
 
-        
     </style>
 </head>
+
 <body>
 
     <div class="bg-[#2F201C] text-white py-3 top-0 right-0 left-0">
@@ -122,13 +130,13 @@
         </div>
     </header>
 
-   <!-- /// ---- MAIN ---- /// -->
+    <!-- /// ---- MAIN ---- /// -->
 
     <main>
 
         <!-- /// ---- BANNER ---- ///  -->
 
-        <section class="banner relative py-48 bg-[#F5F5F5]">
+        <section class="banner relative py-48 bg-[#F5F5F5] overflow-hidden">
             <div class="banner-img absolute bottom-0 left-0">
                 <img src="image/Group 1000003963.png" alt="" class="inline-block">
             </div>
@@ -170,7 +178,8 @@
             <div class="max-w-screen-xl mx-auto">
                 <div class="who-we-are-title text-center">
                     <span class="text-lg font-medium text-[#3D5480] border-b border-[#3D5480]">Who We Are</span>
-                    <h2 class="text-[46px] font-bold text-[#363232]">We Are Providing the Best Quality <span class="text-[#6BB03A]">Online Courses.</span> Our All  Instructors Are High Expert</h2>
+                    <h2 class="text-[46px] font-bold text-[#363232]">We Are Providing the Best Quality <span
+                            class="text-[#6BB03A]">Online Courses.</span> Our All Instructors Are High Expert</h2>
                 </div>
                 <div class="who-we-are-inner text-center mt-6">
                     <div class="flex flex-wrap items-center ">
@@ -196,17 +205,187 @@
 
         <section class="mt-16">
             <div class="max-w-screen-xl mx-auto">
-                <div class="about-items px-5  py-5 rounded-xl ">
-                    <div class="flex items-center">
-                        <div class="w-3/5">
-                            <div class="about-content ">
-                                <p class="text-[#333333] font-medium">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text.All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, </p>
+                <div class="about-items px-5 py-5 rounded-xl ">
+                    <div class="flex flex-wrap items-center">
+                        <div class="flex items-center my-7">
+                            <div class="w-3/5">
+                                <div class="about-content pl-5 py-10">
+                                    <p class="text-[#333333] font-medium ">There are many variations of passages of Lorem
+                                        Ipsum available, but the majority have suffered alteration in some form, by
+                                        injected humour, or randomised words which don't look even slightly believable.
+                                        If you are going to use a passage of Lorem Ipsum, you need to be sure there
+                                        isn't anything embarrassing hidden in the middle of text.All the Lorem Ipsum
+                                        generators on the Internet tend to repeat predefined chunks as necessary, </p>
+                                </div>
+                            </div>
+                            <div class="w-2/5">
+                                <div class="about-items-box ml-6">
+                                    <i
+                                        class="fa-solid fa-paintbrush text-3xl border border-[#2F201C] px-[15px] py-[14px] rounded-full inline-block mr-3"></i>
+                                    <h2 class="inline-block text-[#2F201C] font-semibold text-5xl">Special <span
+                                            class="text-[#6BB03A]">Education</span></h2>
+                                </div>
                             </div>
                         </div>
-                        <div class="w-2/5">
-                            <div class="about-items-box ml-6">
-                                <i class="fa-solid fa-paintbrush text-3xl border border-[#2F201C] px-[15px] py-[14px] rounded-full inline-block mr-3"></i>
-                                <h2 class="inline-block text-[#2F201C] font-semibold text-5xl">Special <span class="text-[#6BB03A]">Education</span></h2>
+                        <div class="flex items-center my-7">
+                            <div class="w-2/5">
+                                <div class="about-items-box ml-6">
+                                    <h2 class="inline-block text-[#2F201C] font-semibold text-5xl"> Theme <span
+                                            class="text-[#6BB03A]">Events</span></h2>
+                                    <i class="fa-solid fa-calendar-days text-3xl border border-[#2F201C] px-[20px] py-[14px] rounded-full inline-block ml-3"></i>
+                                </div>
+                            </div>
+                            <div class="w-3/5">
+                                <div class="about-content pl-5 py-10">
+                                    <p class="text-[#333333] font-medium">There are many variations of passages of Lorem
+                                        Ipsum available, but the majority have suffered alteration in some form, by
+                                        injected
+                                        humour, or randomised words which don't look even slightly believable. If you
+                                        are
+                                        going to use a passage of Lorem Ipsum, you need to be sure there isn't anything
+                                        embarrassing hidden in the middle of text.All the Lorem Ipsum generators on the
+                                        Internet tend to repeat predefined chunks as necessary, </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flex items-center my-7">
+                            <div class="w-3/5">
+                                <div class="about-content pl-5 py-10">
+                                    <p class="text-[#333333] font-medium">There are many variations of passages of Lorem
+                                        Ipsum available, but the majority have suffered alteration in some form, by
+                                        injected
+                                        humour, or randomised words which don't look even slightly believable. If you
+                                        are
+                                        going to use a passage of Lorem Ipsum, you need to be sure there isn't anything
+                                        embarrassing hidden in the middle of text.All the Lorem Ipsum generators on the
+                                        Internet tend to repeat predefined chunks as necessary, </p>
+                                </div>
+                            </div>
+                            <div class="w-2/5">
+                                <div class="about-items-box ml-6">
+                                    <i
+                                        class="fa-solid fa-book text-3xl border border-[#2F201C] px-[20px] py-[14px] rounded-full inline-block mr-3"></i>
+                                    <h2 class="inline-block text-[#2F201C] font-semibold text-5xl">Full Day <span
+                                            class="text-[#6BB03A]">Session</span></h2>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flex items-center my-7">
+                            <div class="w-2/5">
+                                <div class="about-items-box -translate-x-5">
+                                    <h2 class="inline-block text-[#2F201C] font-semibold text-5xl ml-2">Qualified <span
+                                            class="text-[#6BB03A]">Teacher’s</span></h2>
+                                    <i class="fa-solid fa-user text-3xl border border-[#2F201C] px-[20px] py-[14px] rounded-full inline-block"></i>
+                                </div>
+                            </div>
+                            <div class="w-3/5">
+                                <div class="about-content pl-5 py-10">
+                                    <p class="text-[#333333] font-medium">There are many variations of passages of Lorem
+                                        Ipsum available, but the majority have suffered alteration in some form, by
+                                        injected
+                                        humour, or randomised words which don't look even slightly believable. If you
+                                        are
+                                        going to use a passage of Lorem Ipsum, you need to be sure there isn't anything
+                                        embarrassing hidden in the middle of text.All the Lorem Ipsum generators on the
+                                        Internet tend to repeat predefined chunks as necessary, </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flex items-center my-7">
+                            <div class="w-3/5">
+                                <div class="about-content pl-5 py-10">
+                                    <p class="text-[#333333] font-medium">There are many variations of passages of Lorem
+                                        Ipsum available, but the majority have suffered alteration in some form, by
+                                        injected
+                                        humour, or randomised words which don't look even slightly believable. If you
+                                        are
+                                        going to use a passage of Lorem Ipsum, you need to be sure there isn't anything
+                                        embarrassing hidden in the middle of text.All the Lorem Ipsum generators on the
+                                        Internet tend to repeat predefined chunks as necessary, </p>
+                                </div>
+                            </div>
+                            <div class="w-2/5">
+                                <div class="about-items-box ml-6">
+                                    <i
+                                        class="fa-solid fa-graduation-cap text-3xl border border-[#2F201C] px-[15px] py-[14px] rounded-full inline-block mr-3"></i>
+                                    <h2 class="inline-block text-[#2F201C] font-semibold text-5xl">Pre <span
+                                            class="text-[#6BB03A]">Classes</span></h2>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flex items-center my-7">
+                            <div class="w-2/5">
+                                <div class="about-items-box ml-6">
+                                    <h2 class="inline-block text-[#2F201C] font-semibold text-5xl">24/7 <span
+                                            class="text-[#6BB03A]">Supports</span></h2>
+                                    <i
+                                        class="fa-solid fa-clock text-3xl border border-[#2F201C] px-[18px] py-[14px] rounded-full inline-block ml-3"></i>
+                                </div>
+                            </div>
+                            <div class="w-3/5">
+                                <div class="about-content pl-5 py-10">
+                                    <p class="text-[#333333] font-medium">There are many variations of passages of Lorem
+                                        Ipsum available, but the majority have suffered alteration in some form, by
+                                        injected
+                                        humour, or randomised words which don't look even slightly believable. If you
+                                        are
+                                        going to use a passage of Lorem Ipsum, you need to be sure there isn't anything
+                                        embarrassing hidden in the middle of text.All the Lorem Ipsum generators on the
+                                        Internet tend to repeat predefined chunks as necessary, </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="mt-52">
+            <div class="max-w-screen-xl mx-auto">
+                <div class="our-mission">
+                    <div class="flex items-center">
+                        <div class="w-1/2">
+                            <div class="our-mission-img relative">
+                                <div class="bg-[#F0CBAC66] w-[755px] h-[550px] absolute -z-10 -top-[150px] -left-[310px] text-right pr-10 pt-8">
+                                    <h3 class="text-[64px] font-bold opacity-20">Our Mission</h3>
+                                </div>
+                                <div class="bg-[#DC7823] z-20">
+                                    <img src="image/Rectangle 19432.png" alt="" class="inline-block">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="w-1/2">
+                            <div class="our-mission-content ml-16">
+                                <div>
+                                    <h2 class="text-5xl font-bold text-[#363232] mb-4">Education In Continuing A <span class="text-[#6BB03A]">Proud Tradition</span></h2>
+                                    <p class="text-[#333333]">To develop in our students the desire and capacity for : Learning to Think , Learning to Do and Leraning to Be.</p>
+                                    <p class="text-[#333333] my-3">To provide all our students with an outstanding education , on that inspires them to achieve their personal best and prepares them for their future.</p>
+                                    <p class="text-[#333333]">Therefore, our School respects the individual needs of children; fosters a caring and creative environment; and emphasizes the social, emotional, physical, intellectual development of each child.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="our-vision mt-40">
+                    <div class="flex items-center">
+                        <div class="w-1/2">
+                            <div class="our-mission-content">
+                                <div class="our-vision-content mr-14">
+                                    <h2 class="text-5xl font-bold text-[#363232] mb-4">Education Is About Creating Leaders  <span class="text-[#6BB03A]">For Tomorrow</span></h2>
+                                    <p class="text-[#333333]">To develop in our students the desire and capacity for : Learning to Think , Learning to Do and Leraning to Be.</p>
+                                    <p class="text-[#333333] my-3">To provide all our students with an outstanding education , on that inspires them to achieve their personal best and prepares them for their future.</p>
+                                    <p class="text-[#333333]">Therefore, our School respects the individual needs of children; fosters a caring and creative environment; and emphasizes the social, emotional, physical, intellectual development of each child.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="w-1/2">
+                            <div class="our-mission-img relative">
+                                <div class="bg-[#F0CBAC66] w-[755px] h-[550px] absolute -z-10 -top-[150px] -right-[310px] pl-10 pt-8">
+                                    <h3 class="text-[64px] font-bold opacity-20">Our Vision</h3>
+                                </div>
+                                <div class="bg-[#DC7823] text-right">
+                                    <img src="image/Rectangle 19432 (1).png" alt="" class="inline-block">
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -218,7 +397,7 @@
 
     <!-- /// ---- FOOTER ---- ///  -->
 
-    <<footer class="bg-[#2F201C] mt-10">
+    <footer class="bg-[#2F201C] mt-36">
         <div class="text-center footer-title border-b border-white pb-6">
             <img src="image/logo.jpg" alt="" class="inline-block rounded-lg">
             <p class="max-w-4xl mx-auto text-white mt-6">Lorem Ipsum is simply dummy text of the printing and
@@ -331,12 +510,13 @@
             </div>
         </div>
         <div class="copyright text-center border-t border-white text-white py-6">
-            <p> © 2023Tr All Rights Reserved.  ashadeep group of School</p>
+            <p> © 2023Tr All Rights Reserved. ashadeep group of School</p>
         </div>
     </footer>
-    
+
 
 
     <script src="js/jquery-3.7.1.min.js" type="text/javascript"></script>
 </body>
+
 </html>
