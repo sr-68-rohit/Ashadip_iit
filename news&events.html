@@ -42,11 +42,19 @@
         h1::after {
             content: "News &Event";
             color: #AC796C1A;
-            font-size: 150px;
+            font-size: 50px;
             font-weight: 800;
             position: absolute;
-            top: 24%;
-            left: 22%;
+            top: 34%;
+            left: 8%;
+        }
+        @media (min-width:768px) {
+            h1::after {
+                font-size: 150px;
+                font-weight: 800;
+                top: 24%;
+                left: 32%;
+            }
         }
     </style>
 </head>
@@ -54,31 +62,37 @@
 <body>
 
     <div class="bg-[#2F201C] text-white py-3 top-0 right-0 left-0">
-        <div class="max-w-screen-xl mx-auto">
-            <div class="flex flex-wrap justify-between items-center">
-                <div>
-                    <h4 class="text-base font-semibold inline-block">Selected School : </h4>
+        <div class="max-w-screen-xl mx-auto px-4">
+            <div class="flex flex-col md:flex-row md:justify-between md:items-center">
+                <div class="mb-2 md:mb-0">
+                    <h4 class="text-base font-semibold inline-block">Selected School:</h4>
                     <span class="text-base font-normal">Ashadeep Vidyalay 02</span>
                 </div>
-                <div>
-                    <p>Managed By “ Ashadeep Group of Schools “</p>
+                <div class="mb-2 md:mb-0">
+                    <p class="text-sm md:text-base">Managed By “ Ashadeep Group of Schools “</p>
                 </div>
                 <div>
-                    <ul class="flex justify-between flex-wrap items-center">
-                        <li class="">
-                            <a href="javascript:void(0)" class="text-sm">+91 9099031531</a>
+                    <ul class="flex flex-col md:flex-row md:justify-between md:items-center space-y-2 md:space-y-0">
+                        <li>
+                            <a href="tel:+919099031531" class="text-sm hover:underline">+91 9099031531</a>
                         </li>
-                        <li class="mx-3">
-                            <a href="javascript:void(0)" class="text-sm">ashadeepit111@gmail.com</a>
+                        <li class="md:mx-3">
+                            <a href="mailto:ashadeepit111@gmail.com" class="text-sm hover:underline">ashadeepit111@gmail.com</a>
                         </li>
                         <li>
-                            <a href="javascript:void(0)"><i class="fa-brands fa-facebook"></i></a>
+                            <a href="javascript:void(0)" class="text-sm hover:text-blue-500">
+                                <i class="fa-brands fa-facebook"></i>
+                            </a>
                         </li>
-                        <li class="mx-3">
-                            <a href="javascript:void(0)"><i class="fa-brands fa-square-instagram"></i></a>
+                        <li class="md:mx-3">
+                            <a href="javascript:void(0)" class="text-sm hover:text-pink-500">
+                                <i class="fa-brands fa-square-instagram"></i>
+                            </a>
                         </li>
                         <li>
-                            <a href="javascript:void(0)"><i class="fa-brands fa-square-youtube"></i></a>
+                            <a href="javascript:void(0)" class="text-sm hover:text-red-500">
+                                <i class="fa-brands fa-square-youtube"></i>
+                            </a>
                         </li>
                     </ul>
                 </div>
@@ -88,37 +102,45 @@
 
     <!-- /// ---- HEADER ---- /// -->
 
-    <header class="top-12 right-0 left-0 bg-white">
-        <div class="max-w-screen-xl mx-auto">
+    <header class="bg-white shadow-md top-12 right-0 left-0">
+        <div class="max-w-screen-xl mx-auto px-4 relative">
             <div class="flex flex-wrap justify-between items-center">
                 <div>
                     <a href="javascript:void(0)">
-                        <img src="image/logo.png" alt="Logo" title="Logo">
+                        <img src="image/logo.png" alt="Logo" title="Logo" class="h-10 w-auto">
                     </a>
                 </div>
-                <ul class="flex flex-wrap justify-between">
-                    <li class="mr-4">
-                        <a href="./index.html" class="text-lg font-semibold hover:text-[#DC7823]">Home</a>
-                    </li>
-                    <li class="mr-4">
-                        <a href="./about.html" class="text-lg font-semibold hover:text-[#DC7823]">About Us</a>
-                    </li>
-                    <li class="mr-4">
-                        <a href="./news&events.html" class="text-lg font-semibold hover:text-[#DC7823]">News&Events</a>
-                    </li>
-                    <li class="mr-4">
-                        <a href="./gallery.html" class="text-lg font-semibold hover:text-[#DC7823]">Gallery</a>
-                    </li>
-                    <li class="mr-4">
-                        <a href="./team.html" class="text-lg font-semibold hover:text-[#DC7823]">Team</a>
-                    </li>
-                    <li class="mr-4">
-                        <a href="./contact-us.html" class="text-lg font-semibold hover:text-[#DC7823]">Contact Us</a>
-                    </li>
-                </ul>
-                <div>
-                    <a href="javascript:void(0)"
-                        class="bg-[#DC7823] text-white px-6 py-2 rounded font-semibold">Login</a>
+                <div class="md:hidden">
+                    <button id="menu-toggle" class="text-gray-800 focus:outline-none">
+                        <i class="fa-solid fa-bars"></i>
+                    </button>
+                </div>
+                <nav class="absolute top-full bg-white md:bg-transparent left-0 right-0  md:static pl-10 md:pl-0 z-10">
+                    <ul id="menu" class="hidden md:flex md:flex-wrap md:justify-between md:items-center space-y-2 md:space-y-0">
+                        <li class="mr-4">
+                            <a href="./index.html" class="text-lg font-semibold hover:text-[#DC7823]">Home</a>
+                        </li>
+                        <li class="mr-4">
+                            <a href="./about.html" class="text-lg font-semibold hover:text-[#DC7823]">About Us</a>
+                        </li>
+                        <li class="mr-4">
+                            <a href="./news&events.html" class="text-lg font-semibold hover:text-[#DC7823]">News & Events</a>
+                        </li>
+                        <li class="mr-4">
+                            <a href="./gallery.html" class="text-lg font-semibold hover:text-[#DC7823]">Gallery</a>
+                        </li>
+                        <li class="mr-4">
+                            <a href="./team.html" class="text-lg font-semibold hover:text-[#DC7823]">Team</a>
+                        </li>
+                        <li class="mr-4">
+                            <a href="./contact-us.html" class="text-lg font-semibold hover:text-[#DC7823]">Contact Us</a>
+                        </li>
+                    </ul>
+                </nav>
+                <div class="hidden md:block">
+                    <a href="javascript:void(0)" class="bg-[#DC7823] text-white px-6 py-2 rounded font-semibold hover:bg-[#c66520]">
+                        Login
+                    </a>
                 </div>
             </div>
         </div>
@@ -130,52 +152,52 @@
 
         <!-- /// ---- BANNER ---- ///  -->
 
-        <section class="banner relative py-48 bg-[#F5F5F5] overflow-hidden">
+        <section class="banner relative py-28 md:py-48 bg-[#F5F5F5] overflow-hidden">
             <div class="banner-img absolute bottom-0 left-0">
-                <img src="image/Group 1000003963.png" alt="" class="inline-block">
+                <img src="image/Group 1000003963.png" alt="" class="inline-block  w-[200px] md:w-auto">
             </div>
-            <div class="max-w-screen-xl mx-auto text-center">
-                <h1 class="text-[88px] font-bold">NEWS &EVENT</h1>
+            <div class="max-w-[1320px] mx-auto text-center">
+                <h1 class="text-[30px] md:text-[88px] font-bold">NEWS &EVENT</h1>
             </div>
             <div class="banner-img2 absolute bottom-0 right-[-120px]">
-                <img src="image/Group 1000003964.png" alt="" class="inline-block">
+                <img src="image/Group 1000003964.png" alt="" class="inline-block  w-[200px] md:w-auto">
             </div>
         </section>
 
         <div class="events mt-16">
-            <div class="max-w-screen-xl mx-auto">
+            <div class="max-w-[1320px] mx-auto px-5">
                 <div class="events-items rounded-lg bg-[#DC7823] mt-6">
-                    <div class="events-box bg-white rounded-lg shadow-lg py-2 px-6 translate-x-2">
-                        <div class="flex items-center">
-                            <div class="w-1/5">
+                    <div class="events-box bg-white rounded-lg shadow-lg md:py-2 md:px-6 translate-x-[5px]">
+                        <div class="flex flex-wrap md:flex-nowrap items-center">
+                            <div class="w-full md:w-1/5">
                                 <div class="events-img mr-5">
-                                    <img src="image/Rectangle 19466.png" alt="" class="inline-block">
+                                    <img src="image/Rectangle 19466.png" alt="" class="inline-block w-full">
                                 </div>
                             </div>
-                            <div class="w-4/5">
-                                <div class="events-content">
-                                    <h3 class="text-2xl font-semibold text-[#2F201C]">Digital Transformation Conference
+                            <div class="w-full md:w-4/5">
+                                <div class="events-content flex flex-row flex-wrap px-3 md:p-0 py-2 ">
+                                    <h3 class="text-base my-3 md:my-0 md:text-2xl font-semibold text-[#2F201C] order-2 md:order-1">Digital Transformation Conference
                                     </h3>
-                                    <p class="text-[#333333] mt-3">There are many variations of passages of Lorem Ipsum
+                                    <p class="text-[#333333] mt-3 order-4 md:order-2">There are many variations of passages of Lorem Ipsum
                                         available, but the majority have
                                         suffered alteration in will a some form, by injected humour, or randomised words
-                                        which don't look even slightly believable. If you are going to use a passage of
-                                        Lorem Ipsum, a you need to be sure there isn't anything embarrassing hidden in
-                                        the
-                                        middle of text.All the Lorem Ipsum generators on the Internetsee to be tend to
-                                        repeat predefined chunks as necessary,slightly believable. If you are going to
-                                        use a
-                                        passage of </p>
-                                    <div class="flex justify-between items-center my-3">
+                                        which don't look even <span class="hidden md:block">slightly believable. If you are going to use a passage of
+                                            Lorem Ipsum, a you need to be sure there isn't anything embarrassing hidden in
+                                            the
+                                            middle of text.All the Lorem Ipsum generators on the Internetsee to be tend to
+                                            repeat predefined chunks as necessary,slightly believable. If you are going to
+                                            use a
+                                            passage of</span> </p>
+                                    <div class="flex justify-between flex-row items-center md:my-3 order-1 md:order-3">
                                         <h6 class="inline-block text-sm text-[#535050] font-medium"><i
                                                 class="fa-solid fa-calendar-days inline-block text-[#DC7823] text-lg mr-2"></i>29/07/2020
                                             11 AMto 15 PM</h6>
-                                        <span class="inline-block text-sm font-medium text-[#6BB03A]">Free</span>
+                                        <span class="inline-block text-sm font-medium text-[#6BB03A] ml-16">Free</span>
                                     </div>
-                                    <div class="flex items-center">
-                                        <div class="inline-block mr-32">
-                                            <img src="image/Ellipse 14.png" alt="" class="inline-block">
-                                            <h5 class="inline-block text-sm font-medium text-[#535050] ml-2">Amanda Kern
+                                    <div class="flex items-center flex-row order-3 md:order-4">
+                                        <div class="inline-block mr-2 md:mr-32">
+                                            <img src="image/Ellipse 14.png" alt="" class="inline-block w-[25px]">
+                                            <h5 class="inline-block text-sm font-medium text-[#535050] md:ml-2">Amanda Kern
                                             </h5>
                                         </div>
 
@@ -190,25 +212,25 @@
                 </div>
                 <div class="events-items rounded-lg bg-[#DC7823] mt-6">
                     <div class="events-box bg-white rounded-lg shadow-lg py-2 px-6 translate-x-2 mt-6">
-                        <div class="flex items-center">
-                            <div class="w-1/5">
+                        <div class="flex flex-wrap md:flex-nowrap items-center">
+                            <div class="w-full md:w-1/5">
                                 <div class="events-img mr-5">
-                                    <img src="image/Rectangle 19467.png" alt="" class="inline-block">
+                                    <img src="image/Rectangle 19467.png" alt="" class="inline-block w-full">
                                 </div>
                             </div>
-                            <div class="w-4/5">
+                            <div class="w-full md:w-4/5">
                                 <div class="events-content">
                                     <h3 class="text-2xl font-semibold text-[#2F201C]">Environment Conference</h3>
                                     <p class="text-[#333333] mt-3">There are many variations of passages of Lorem Ipsum
                                         available, but the majority have
                                         suffered alteration in will a some form, by injected humour, or randomised words
-                                        which don't look even slightly believable. If you are going to use a passage of
-                                        Lorem Ipsum, a you need to be sure there isn't anything embarrassing hidden in
-                                        the
-                                        middle of text.All the Lorem Ipsum generators on the Internetsee to be tend to
-                                        repeat predefined chunks as necessary,slightly believable. If you are going to
-                                        use a
-                                        passage of </p>
+                                        which don't look even <span class="hidden md:block">slightly believable. If you are going to use a passage of
+                                            Lorem Ipsum, a you need to be sure there isn't anything embarrassing hidden in
+                                            the
+                                            middle of text.All the Lorem Ipsum generators on the Internetsee to be tend to
+                                            repeat predefined chunks as necessary,slightly believable. If you are going to
+                                            use a
+                                            passage of</span> </p>
                                     <div class="flex justify-between items-center my-3">
                                         <h6 class="inline-block text-sm text-[#535050] font-medium"><i
                                                 class="fa-solid fa-calendar-days inline-block text-[#DC7823] text-lg mr-2"></i>29/07/2020
@@ -233,25 +255,25 @@
                 </div>
                 <div class="events-items rounded-lg bg-[#DC7823] mt-6">
                     <div class="events-box bg-white rounded-lg shadow-lg py-2 px-6 translate-x-2">
-                        <div class="flex items-center">
-                            <div class="w-1/5">
+                        <div class="flex flex-wrap md:flex-nowrap items-center">
+                            <div class="w-full md:w-1/5">
                                 <div class="events-img mr-5">
-                                    <img src="image/Rectangle 19466 (1).png" alt="" class="inline-block">
+                                    <img src="image/Rectangle 19466 (1).png" alt="" class="inline-block w-full">
                                 </div>
                             </div>
-                            <div class="w-4/5">
+                            <div class="w-full md:w-4/5">
                                 <div class="events-content">
                                     <h3 class="text-2xl font-semibold text-[#2F201C]">Campus Clean Workshop</h3>
                                     <p class="text-[#333333] mt-3">There are many variations of passages of Lorem Ipsum
                                         available, but the majority have
                                         suffered alteration in will a some form, by injected humour, or randomised words
-                                        which don't look even slightly believable. If you are going to use a passage of
-                                        Lorem Ipsum, a you need to be sure there isn't anything embarrassing hidden in
-                                        the
-                                        middle of text.All the Lorem Ipsum generators on the Internetsee to be tend to
-                                        repeat predefined chunks as necessary,slightly believable. If you are going to
-                                        use a
-                                        passage of </p>
+                                        which don't look even <span class="hidden md:block">slightly believable. If you are going to use a passage of
+                                            Lorem Ipsum, a you need to be sure there isn't anything embarrassing hidden in
+                                            the
+                                            middle of text.All the Lorem Ipsum generators on the Internetsee to be tend to
+                                            repeat predefined chunks as necessary,slightly believable. If you are going to
+                                            use a
+                                            passage of</span> </p>
                                     <div class="flex justify-between items-center my-3">
                                         <h6 class="inline-block text-sm text-[#535050] font-medium"><i
                                                 class="fa-solid fa-calendar-days inline-block text-[#DC7823] text-lg mr-2"></i>29/07/2020
@@ -276,26 +298,26 @@
                 </div>
                 <div class="events-items rounded-lg bg-[#DC7823] mt-6">
                     <div class="events-box bg-white rounded-lg shadow-lg py-2 px-6 translate-x-2">
-                        <div class="flex items-center">
-                            <div class="w-1/5">
+                        <div class="flex flex-wrap md:flex-nowrap items-center">
+                            <div class="w-full md:w-1/5">
                                 <div class="events-img mr-5">
-                                    <img src="image/Rectangle 19466 (2).png" alt="" class="inline-block">
+                                    <img src="image/Rectangle 19466 (2).png" alt="" class="inline-block w-full">
                                 </div>
                             </div>
-                            <div class="w-4/5">
+                            <div class="w-full md:w-4/5">
                                 <div class="events-content">
                                     <h3 class="text-2xl font-semibold text-[#2F201C]">Web Design Principle And Best
                                         Practise</h3>
                                     <p class="text-[#333333] mt-3">There are many variations of passages of Lorem Ipsum
                                         available, but the majority have
                                         suffered alteration in will a some form, by injected humour, or randomised words
-                                        which don't look even slightly believable. If you are going to use a passage of
-                                        Lorem Ipsum, a you need to be sure there isn't anything embarrassing hidden in
-                                        the
-                                        middle of text.All the Lorem Ipsum generators on the Internetsee to be tend to
-                                        repeat predefined chunks as necessary,slightly believable. If you are going to
-                                        use a
-                                        passage of </p>
+                                        which don't look even <span class="hidden md:block">slightly believable. If you are going to use a passage of
+                                            Lorem Ipsum, a you need to be sure there isn't anything embarrassing hidden in
+                                            the
+                                            middle of text.All the Lorem Ipsum generators on the Internetsee to be tend to
+                                            repeat predefined chunks as necessary,slightly believable. If you are going to
+                                            use a
+                                            passage of</span> </p>
                                     <div class="flex justify-between items-center my-3">
                                         <h6 class="inline-block text-sm text-[#535050] font-medium"><i
                                                 class="fa-solid fa-calendar-days inline-block text-[#DC7823] text-lg mr-2"></i>29/07/2020
@@ -320,26 +342,26 @@
                 </div>
                 <div class="events-items rounded-lg bg-[#DC7823] mt-6">
                     <div class="events-box bg-white rounded-lg shadow-lg py-2 px-6 translate-x-2">
-                        <div class="flex items-center">
-                            <div class="w-1/5">
+                        <div class="flex flex-wrap md:flex-nowrap items-center">
+                            <div class="w-full md:w-1/5">
                                 <div class="events-img mr-5">
-                                    <img src="image/Rectangle 19466 (3).png" alt="" class="inline-block">
+                                    <img src="image/Rectangle 19466 (3).png" alt="" class="inline-block w-full">
                                 </div>
                             </div>
-                            <div class="w-4/5">
+                            <div class="w-full md:w-4/5">
                                 <div class="events-content">
                                     <h3 class="text-2xl font-semibold text-[#2F201C]">Web Design Principle And Best
                                         Practise</h3>
                                     <p class="text-[#333333] mt-3">There are many variations of passages of Lorem Ipsum
                                         available, but the majority have
                                         suffered alteration in will a some form, by injected humour, or randomised words
-                                        which don't look even slightly believable. If you are going to use a passage of
-                                        Lorem Ipsum, a you need to be sure there isn't anything embarrassing hidden in
-                                        the
-                                        middle of text.All the Lorem Ipsum generators on the Internetsee to be tend to
-                                        repeat predefined chunks as necessary,slightly believable. If you are going to
-                                        use a
-                                        passage of </p>
+                                        which don't look even <span class="hidden md:block">slightly believable. If you are going to use a passage of
+                                            Lorem Ipsum, a you need to be sure there isn't anything embarrassing hidden in
+                                            the
+                                            middle of text.All the Lorem Ipsum generators on the Internetsee to be tend to
+                                            repeat predefined chunks as necessary,slightly believable. If you are going to
+                                            use a
+                                            passage of</span> </p>
                                     <div class="flex justify-between items-center my-3">
                                         <h6 class="inline-block text-sm text-[#535050] font-medium"><i
                                                 class="fa-solid fa-calendar-days inline-block text-[#DC7823] text-lg mr-2"></i>29/07/2020
@@ -490,6 +512,14 @@
 
 
     <script src="js/jquery-3.7.1.min.js" type="text/javascript"></script>
+    <script>
+        const menuToggle = document.getElementById('menu-toggle');
+        const menu = document.getElementById('menu');
+        
+        menuToggle.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+        });
+    </script>
 </body>
 
 </html>
