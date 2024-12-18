@@ -46,15 +46,7 @@
             position: relative;
         }
 
-        .app::before {
-            content: "APPLICATION";
-            position: absolute;
-            top: -55px;
-            left: 0;
-            color: #E1E0E04D;
-            font-size: 140px;
-            font-weight: 700;
-        }
+        
 
         .app::after {
             content: "";
@@ -74,31 +66,37 @@
 <body>
 
     <div class="bg-[#2F201C] text-white py-3 top-0 right-0 left-0">
-        <div class="max-w-screen-xl mx-auto">
-            <div class="flex flex-wrap justify-between items-center">
-                <div>
-                    <h4 class="text-base font-semibold inline-block">Selected School : </h4>
+        <div class="max-w-screen-xl mx-auto px-4">
+            <div class="flex flex-col md:flex-row md:justify-between md:items-center">
+                <div class="mb-2 md:mb-0">
+                    <h4 class="text-base font-semibold inline-block">Selected School:</h4>
                     <span class="text-base font-normal">Ashadeep Vidyalay 02</span>
                 </div>
-                <div>
-                    <p>Managed By “ Ashadeep Group of Schools “</p>
+                <div class="mb-2 md:mb-0">
+                    <p class="text-sm md:text-base">Managed By “ Ashadeep Group of Schools “</p>
                 </div>
                 <div>
-                    <ul class="flex justify-between flex-wrap items-center">
-                        <li class="">
-                            <a href="javascript:void(0)" class="text-sm">+91 9099031531</a>
+                    <ul class="flex flex-col md:flex-row md:justify-between md:items-center space-y-2 md:space-y-0">
+                        <li>
+                            <a href="tel:+919099031531" class="text-sm hover:underline">+91 9099031531</a>
                         </li>
-                        <li class="mx-3">
-                            <a href="javascript:void(0)" class="text-sm">ashadeepit111@gmail.com</a>
+                        <li class="md:mx-3">
+                            <a href="mailto:ashadeepit111@gmail.com" class="text-sm hover:underline">ashadeepit111@gmail.com</a>
                         </li>
                         <li>
-                            <a href="javascript:void(0)"><i class="fa-brands fa-facebook"></i></a>
+                            <a href="javascript:void(0)" class="text-sm hover:text-blue-500">
+                                <i class="fa-brands fa-facebook"></i>
+                            </a>
                         </li>
-                        <li class="mx-3">
-                            <a href="javascript:void(0)"><i class="fa-brands fa-square-instagram"></i></a>
+                        <li class="md:mx-3">
+                            <a href="javascript:void(0)" class="text-sm hover:text-pink-500">
+                                <i class="fa-brands fa-square-instagram"></i>
+                            </a>
                         </li>
                         <li>
-                            <a href="javascript:void(0)"><i class="fa-brands fa-square-youtube"></i></a>
+                            <a href="javascript:void(0)" class="text-sm hover:text-red-500">
+                                <i class="fa-brands fa-square-youtube"></i>
+                            </a>
                         </li>
                     </ul>
                 </div>
@@ -108,37 +106,45 @@
 
     <!-- /// ---- HEADER ---- /// -->
 
-    <header class="top-12 right-0 left-0 bg-white">
-        <div class="max-w-screen-xl mx-auto">
+    <header class="bg-white shadow-md top-12 right-0 left-0">
+        <div class="max-w-screen-xl mx-auto px-4 relative">
             <div class="flex flex-wrap justify-between items-center">
                 <div>
                     <a href="javascript:void(0)">
-                        <img src="image/logo.png" alt="Logo" title="Logo">
+                        <img src="image/logo.png" alt="Logo" title="Logo" class="h-10 w-auto">
                     </a>
                 </div>
-                <ul class="flex flex-wrap justify-between">
-                    <li class="mr-4">
-                        <a href="./home.html" class="text-lg font-semibold hover:text-[#DC7823]">Home</a>
-                    </li>
-                    <li class="mr-4">
-                        <a href="./about.html" class="text-lg font-semibold hover:text-[#DC7823]">About Us</a>
-                    </li>
-                    <li class="mr-4">
-                        <a href="./news&events.html" class="text-lg font-semibold hover:text-[#DC7823]">News&Events</a>
-                    </li>
-                    <li class="mr-4">
-                        <a href="./gallery.html" class="text-lg font-semibold hover:text-[#DC7823]">Gallery</a>
-                    </li>
-                    <li class="mr-4">
-                        <a href="./team.html" class="text-lg font-semibold hover:text-[#DC7823]">Team</a>
-                    </li>
-                    <li class="mr-4">
-                        <a href="./contact-us.html" class="text-lg font-semibold hover:text-[#DC7823]">Contact Us</a>
-                    </li>
-                </ul>
-                <div>
-                    <a href="javascript:void(0)"
-                        class="bg-[#DC7823] text-white px-6 py-2 rounded font-semibold">Login</a>
+                <div class="md:hidden">
+                    <button id="menu-toggle" class="text-gray-800 focus:outline-none">
+                        <i class="fa-solid fa-bars"></i>
+                    </button>
+                </div>
+                <nav class="absolute top-full bg-white md:bg-transparent left-0 right-0  md:static pl-10 md:pl-0">
+                    <ul id="menu" class="hidden md:flex md:flex-wrap md:justify-between md:items-center space-y-2 md:space-y-0">
+                        <li class="mr-4">
+                            <a href="./index.html" class="text-lg font-semibold hover:text-[#DC7823]">Home</a>
+                        </li>
+                        <li class="mr-4">
+                            <a href="./about.html" class="text-lg font-semibold hover:text-[#DC7823]">About Us</a>
+                        </li>
+                        <li class="mr-4">
+                            <a href="./news&events.html" class="text-lg font-semibold hover:text-[#DC7823]">News & Events</a>
+                        </li>
+                        <li class="mr-4">
+                            <a href="./gallery.html" class="text-lg font-semibold hover:text-[#DC7823]">Gallery</a>
+                        </li>
+                        <li class="mr-4">
+                            <a href="./team.html" class="text-lg font-semibold hover:text-[#DC7823]">Team</a>
+                        </li>
+                        <li class="mr-4">
+                            <a href="./contact-us.html" class="text-lg font-semibold hover:text-[#DC7823]">Contact Us</a>
+                        </li>
+                    </ul>
+                </nav>
+                <div class="hidden md:block">
+                    <a href="javascript:void(0)" class="bg-[#DC7823] text-white px-6 py-2 rounded font-semibold hover:bg-[#c66520]">
+                        Login
+                    </a>
                 </div>
             </div>
         </div>
@@ -151,26 +157,26 @@
         <!-- /// ---- BANNER ---- ///  -->
 
         <section class="bg-[#E9EAF1] pt-14">
-            <div class="max-w-screen-xl mx-auto">
+            <div class="max- md:max-w-[1320px] mx-auto px-5">
                 <div class="flex flex-wrap items-center">
-                    <div class="w-1/2">
+                    <div class="w-full md:w-1/2">
                         <div class="banner-content">
-                            <div class="flex ">
+                            <div class="flex invisible md:visible">
                                 <p class="text-lg text-[#3D5480] bg-[#3D548133] font-semibold px-6 py-2 rounded-3xl">JEE
                                     | NEET | FOUNDATION</p>
                                 <p
                                     class="text-lg text-[#3D5480] bg-[#3D548133] font-semibold px-6 py-2 rounded-3xl ml-4">
                                     GUJCET-2022</p>
                             </div>
-                            <h1 class="text-[85px] font-bold text-[#754B3C]">ASHADEEP <span
+                            <h1 class="text-[24px] md:text-[85px] font-bold text-[#754B3C]">ASHADEEP <span
                                     class="text-[#97B83B]">IIT</span></h1>
-                            <P class="text-xl font-bold text-[#535353]">Proud <span class="text-[#6BB03A]">Ashadeep iit
+                            <P class="text-sm font-medium md:text-xl md:font-bold text-[#535353]">Proud <span class="text-[#6BB03A]">Ashadeep iit
                                     Students</span>, Honored with <span class="text-[#97B83B]">LAPTOPS</span> for
                                 Securing Admission in Prime <span class="text-[#6BB03A]">IIT ENGINEERING</span>
                                 institutes of india.</P>
                             <div class="flex items-center mt-5">
                                 <a href="javascript:void(0)"
-                                    class="bg-[#DC7823] inline-block px-6 py-2 rounded-lg text-lg font-semibold text-white mr-4">Contact
+                                    class="bg-[#DC7823] inline-block px-3 py-2 rounded-lg text-sm md:text-lg font-medium md:font-semibold text-white mr-2 md:mr-4">Contact
                                     Us</a>
                                 <ul class="flex items-center">
                                     <li class="mr-1">
@@ -187,14 +193,14 @@
                             </div>
                         </div>
                     </div>
-                    <div class="w-1/2">
+                    <div class="w-full md:w-1/2">
                         <div class="banner-img relative overflow-hidden">
                             <img src="image/banner_img 1.png" alt="">
-                            <div class="absolute top-20 left-[-1%]">
-                                <img src="image/Group 1000005229.png" alt="">
+                            <div class="absolute  top-20 left-[-1%]">
+                                <img src="image/Group 1000005229.png" alt="" class="w-[150px] md:w-[100%] inline-block">
                             </div>
                             <div class="absolute bottom-3 right-[-8%]">
-                                <img src="image/Group 1000005231 (1).png" alt="" class="inline-block">
+                                <img src="image/Group 1000005231 (1).png" alt="" class="inline-block w-[180px]">
                             </div>
                         </div>
                     </div>
@@ -202,30 +208,32 @@
             </div>
         </section>
 
+        
+
         <!-- /// ---- STUDENTS ---- ///  -->
 
         <section>
-            <div class="max-w-screen-xl ms-auto py-14">
+            <div class="max-w-[1320px] ms-auto py-14 px-5">
                 <div class="flex flex-wrap items-center">
-                    <div class="w-1/6">
-                        <div class="student-content">
-                            <h2 class="text-[#363232] text-5xl font-bold">Our Honorable</h2>
-                            <span class="text-[#85BD5D] text-5xl font-bold">Student</span>
+                    <div class="w-full md:w-1/6">
+                        <div class="student-content md:-translate-x-20 text-center mb-5 md:mb-0">
+                            <h2 class="text-[#363232] text-[24px] md:text-5xl font-bold  inline-block">Our Honorable</h2>
+                            <span class="text-[#85BD5D] text-[24px] md:text-5xl font-bold ">Student</span>
                         </div>
                     </div>
-                    <div class="w-5/6">
-                        <div class="student-items flex flex-wrap ml-16">
-                            <div class="w-1/4 xl:w-1/3">
-                                <div class="items-box ml-4 shadow-lg rounded-lg">
+                    <div class="w-full md:w-5/6">
+                        <div class="student-items flex flex-wrap items-center">
+                            <div class="w-full md:w-1/4">
+                                <div class="items-box shadow-lg rounded-lg ml-4 mt-4">
                                     <div>
-                                        <img src="image/Rectangle 19363.png" alt="">
+                                        <img src="image/Rectangle 19363.png" alt="" class="w-full">
                                     </div>
                                     <div>
-                                        <ul class="flex justify-between items-center px-8 py-4">
+                                        <ul class="flex items-center py-4">
                                             <li>
-                                                <h3>Davra Krisha</h3>
-                                                <p>662/700</p>
-                                                <p>94.86%</p>
+                                                <h3 class="text-[22px] font-bold text-[#535050]">Davra Krisha</h3>
+                                                <p class="text-[#535050] text-lg font-semibold">662/700</p>
+                                                <p class="text-[#535050] font-normal text-base">94.86%</p>
                                             </li>
                                             <li>
                                                 <img src="image/image 24.png" alt="">
@@ -234,17 +242,17 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="w-1/4 xl:w-1/3">
-                                <div class="items-box ml-4 shadow-lg rounded-lg">
+                            <div class="w-full md:w-1/4">
+                                <div class="items-box shadow-lg rounded-lg ml-4 mt-4">
                                     <div>
-                                        <img src="image/image 48.png" alt="">
+                                        <img src="image/image 48.png" alt="" class="w-full">
                                     </div>
                                     <div>
-                                        <ul class="flex justify-between items-center px-8 py-4">
+                                        <ul class="flex items-center py-4">
                                             <li>
-                                                <h3>Davra Krisha</h3>
-                                                <p>664/700</p>
-                                                <p>93.86%</p>
+                                                <h3 class="text-[22px] font-bold text-[#535050]">Kakar Khushi</h3>
+                                                <p class="text-[#535050] text-lg font-semibold">664/700</p>
+                                                <p class="text-[#535050] font-normal text-base">93.86%</p>
                                             </li>
                                             <li>
                                                 <img src="image/image 46.png" alt="">
@@ -253,17 +261,17 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="w-1/4 xl:w-1/3">
-                                <div class="items-box ml-4 shadow-lg rounded-lg">
+                            <div class="w-full md:w-1/4">
+                                <div class="items-box shadow-lg rounded-lg ml-4 mt-4">
                                     <div>
-                                        <img src="image/Rectangle 19376.png" alt="">
+                                        <img src="image/Rectangle 19376.png" alt="" class="w-full">
                                     </div>
                                     <div>
-                                        <ul class="flex justify-between items-center px-8 py-4">
+                                        <ul class="flex items-center py-4">
                                             <li>
-                                                <h3>Davra Krisha</h3>
-                                                <p>658/700</p>
-                                                <p>92.86%</p>
+                                                <h3 class="text-[20px] font-bold text-[#535050]">Goyani Raj</h3>
+                                                <p class="text-[#535050] text-lg font-semibold">658/700</p>
+                                                <p class="text-[#535050] font-normal text-base">92.86%</p>
                                             </li>
                                             <li>
                                                 <img src="image/image 24.png" alt="">
@@ -273,17 +281,17 @@
                                 </div>
                             </div>
 
-                            <div class="w-1/4 xl:w-1/3">
-                                <div class="items-box mt-5 ml-4 shadow-lg rounded-lg">
+                            <div class="w-full md:w-1/4">
+                                <div class="items-box shadow-lg rounded-lg ml-4 mt-4">
                                     <div>
-                                        <img src="image/Rectangle 19377.png" alt="">
+                                        <img src="image/Rectangle 19377.png" alt="" class="w-full">
                                     </div>
                                     <div>
-                                        <ul class="flex justify-between items-center px-8 py-4">
+                                        <ul class="flex items-center py-4">
                                             <li>
-                                                <h3>Davra Krisha</h3>
-                                                <p>658/700</p>
-                                                <p>92.76%</p>
+                                                <h3 class="text-[22px] font-bold text-[#535050]">Sheta Jil</h3>
+                                                <p class="text-[#535050] text-lg font-semibold">658/700</p>
+                                                <p class="text-[#535050] font-normal text-base">92.76%</p>
                                             </li>
                                             <li>
                                                 <img src="image/image 49.png" alt="">
@@ -304,42 +312,42 @@
 
         <section>
             <div class="bg-[#2F201C] py-14">
-                <div class="max-w-screen-xl mx-auto">
+                <div class="max-w-[1320px] mx-auto">
                     <div class="about-us-title mb-14">
-                        <h2 class="text-5xl font-semibold text-white">Welcome To <span class="text-[#97B83B]">Ashadeep
+                        <h2 class=" text-[24px] md:text-5xl font-semibold text-white text-center">Welcome To <span class="text-[#97B83B]">Ashadeep
                                 <br>Group Of Schools</span></h2>
                     </div>
-                    <div class="flex flex-wrap items-center">
-                        <div class="w-1/4">
+                    <div class="flex flex-wrap md:flex-nowrap items-center">
+                        <div class="w-full md:w-1/4">
                             <div
-                                class="about-us-items text-center border-2 border-white rounded-lg h-[300px] content-center mx-3">
+                                class="about-us-items text-center border-2 border-white rounded-lg h-[300px] content-center mx-3 mt-3 md:mt-0">
                                 <img src="image/Group 1000003751.png" alt="" class="inline-block">
                                 <h3 class="text-2xl font-semibold text-white my-3">Special Education</h3>
                                 <p class="text-white">Special education is the practice a educating students in a way
                                     that accommodates their individual differences and special needs.</p>
                             </div>
                         </div>
-                        <div class="w-1/4">
+                        <div class="w-full md:w-1/4">
                             <div
-                                class="about-us-items text-center border-2 border-white rounded-lg h-[300px] content-center mx-3">
+                                class="about-us-items text-center border-2 border-white rounded-lg h-[300px] content-center mx-3 mt-3 md:mt-0">
                                 <img src="image/Group 1000003752.png" alt="" class="inline-block">
                                 <h3 class="text-2xl font-semibold text-white my-3">Events</h3>
                                 <p class="text-white">Ashadeep School organizes events celebrates festivals, sports day
                                     & much more.</p>
                             </div>
                         </div>
-                        <div class="w-1/4">
+                        <div class="w-full md:w-1/4">
                             <div
-                                class="about-us-items text-center border-2 border-white rounded-lg h-[300px] content-center mx-3">
+                                class="about-us-items text-center border-2 border-white rounded-lg h-[300px] content-center mx-3 mt-3 md:mt-0">
                                 <img src="image/Group 1000003753.png" alt="" class="inline-block">
                                 <h3 class="text-2xl font-semibold text-white my-3">Full Day Session</h3>
                                 <p class="text-white">The standard full time hours for the will to day, i.e., seven or
                                     eight hours, a depending on the classification of the staff member.</p>
                             </div>
                         </div>
-                        <div class="w-1/4">
+                        <div class="w-full md:w-1/4">
                             <div
-                                class="about-us-items text-center border-2 border-white rounded-lg h-[300px] content-center mx-3">
+                                class="about-us-items text-center border-2 border-white rounded-lg h-[300px] content-center mx-3 mt-3 md:mt-0">
                                 <img src="image/Group 1000003754.png" alt="" class="inline-block">
                                 <h3 class="text-2xl font-semibold text-white my-3">Qualified Teachers</h3>
                                 <p class="text-white">We shall provide all children with an education that academic and
@@ -359,46 +367,13 @@
         <!-- /// ---- OUR-ACHIVEMENT ---- ///  -->
 
         <section>
-            <div class="max-w-screen-xl mx-auto py-14">
+            <div class="max-w-[1320px] mx-auto py-14 px-5">
                 <div class="achivement-title text-center ">
                     <span class="text-[#3D5480] font-medium border-b border-[#3D5480]">Our Achivement</p>
-                        <h2 class="text-5xl text-[#363232] font-bold">Turning Dreams Into <span
+                        <h2 class="text-[24px] md:text-5xl text-[#363232] font-bold">Turning Dreams Into <span
                                 class="text-[#6BB03A]">Reality</span></h2>
                 </div>
-                <!-- <div class="flex flex-wrap items-center">
-                    <div class="w-1/2">
-                        <div class="achivement-items">
-                            <div class="achivement-img">
-                                <img src="image/Rectangle 19389.png" alt="" class="inline-block">
-                            </div>
-                            <h3 class="text-[24px] font-medium text-[#2F201C]">Result Of March 2023....</h3>
-                            <p class="text-xl text-[#535050]">Result of HSC March 2017</p>
-                            <ul class="flex items-center">
-                                <li class="text-[#DC7823] font-medium">03 Sep 2023</li>
-                                <li>
-                                    <a href="" class="text-[#2F201C] font-semibold text-lg">Read More</a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="w-1/2">
-                        <div class="achivement-items">
-                            <div class="achivement-img">
-                                <img src="image/Rectangle 19392.png" alt="" class="inline-block object-cover">
-                            </div>
-                            <h3 class="text-[24px] font-medium text-[#2F201C]">Our Achievement</h3>
-                            <p class="text-sm text-[#535050] font-semibold">માર્ચ ૨૦૧૬-ધોરણ 12 કોમર્સમાં લેવાયેલ ગુજરાત બોર્ડની પરીક્ષામાં <span class="text-[#6BB03A]">સમગ્ર ગુજરાતમાં</span> પ્રથમ ક્રમ પ્રાપ્ત કરેલ વિદ્યાર્થી <span class="text-[#6BB03A]">કોરાટ આશિષ</span></p>
-                            <ul class="flex items-center">
-                                <li class="text-[#DC7823] font-medium">03 Sep 2023</li>
-                                <li>
-                                    <a href="" class="text-[#2F201C] font-semibold text-lg">Read More</a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div> -->
                 <div class="mt-8 grid gap-6 md:grid-cols-2 max-w-6xl mx-auto px-4">
-                    <!-- Card 1 -->
                     <div class="bg-white rounded-lg shadow-md overflow-hidden px-4 py-2">
                         <img src="image/Rectangle 19389.png" alt="Graduation Image" class="w-full object-cover">
                         <div class="p-4">
@@ -439,182 +414,137 @@
 
         <!-- /// ---- OUR-FACILITIES ---- ///  -->
 
-        <!-- <section class="facilities">
-            <div class="max-w-screen-xl">
-                    <div class="facilities-bg">
-                    <div class="flex flex-wrap items-center">
-                        <div class="w-1/3">
-                            <div class="facilities-items ml-16">
-                                <div class="facilities-title">
-                                    <span class="text-white font-medium border-b border-white">Our Facilities</p>
-                                    <h2 class="text-white text-[42px] font-semibold mb-0">Unveiling Our Premises</h2>
-                                    <p class="text-white">Lorem Ipsum is simply dummy text of the printing and typesetting industry will to become.</p>
-                                </div>
-                                <div class="box-1 bg-white rounded-lg px-6 py-10 my-5">
-                                    <img src="image/Frame.png" alt="" class="inline-block mt-2"> <span class="text-[22px] font-semibold text-[#4D4343]">Chemistry Lab</span>
-                                    <p class="text-[#4C4343] mt-5">a place equipped to conduct scientific experiments or tests or to manufacture chemicals, medicines, or the like.</p>
-                                </div>
-                                <div class="box-2 bg-white rounded-lg px-6 py-10">
-                                    <img src="image/Group.png" alt="" class="inline-block mt-2"> <span class="text-[22px] font-semibold text-[#4D4343]">Computer Lab</span>
-                                    <p class="text-[#4C4343] mt-5">a place equipped to conduct scientific experiments or tests or to manufacture chemicals, medicines, or the like.</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="w-1/3">
-                            <div class="facilities-items">
-                                <div class="box-3 bg-white rounded-lg px-6 py-10">
-                                    <img src="image/Frame (1).png" alt="" class="inline-block mt-2"> <span class="text-[22px] font-semibold text-[#4D4343]">Playgrounds</span>
-                                    <p class="text-[#4C4343] mt-5">a place equipped to conduct scientific experiments or tests or to manufacture chemicals, medicines, or the like.</p>
-                                </div>
-                                <div class="box-4 bg-[#3D5480] rounded-lg px-6 py-10 ">
-                                    <img src="image/Frame (2).png" alt="" class="inline-block mt-2"> <span class="text-[22px] font-semibold text-[#4D4343]">Classrooms</span>
-                                    <p class="text-[#4C4343] mt-5">a place equipped to conduct scientific experiments or tests or to manufacture chemicals, medicines, or the like.</p>
-                                </div>
-                                <div class="box-5 bg-white rounded-lg px-6 py-10">
-                                    <img src="image/Frame (3).png" alt="" class="inline-block mt-2"> <span class="text-[22px] font-semibold text-[#4D4343]">Study halls</span>
-                                    <p class="text-[#4C4343] mt-5">a place equipped to conduct scientific experiments or tests or to manufacture chemicals, medicines, or the like.</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="w-1/3">
-                            <div class="facilities-items">
-                                <div class="box-6 bg-white rounded-lg px-6 py-10">
-                                    <img src="image/Frame (4).png" alt="" class="inline-block mt-2"> <span class="text-[22px] font-semibold text-[#4D4343]">Book & Library</span>
-                                    <p class="text-[#4C4343] mt-5">a place equipped to conduct scientific experiments or tests or to manufacture chemicals, medicines, or the like.</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section> -->
-        <section class="facilities mb-10">
-            <div class="relative max-w-screen-xl px-8 py-16">
-                <div class="grid grid-cols-12 gap-8 items-center">
-                    <!-- Left Column -->
-                    <div class="col-span-4 text-white">
-                        <div>
-                            <h4 class="text-lg font-medium border-b border-white pb-2 inline-block">Our Facilities</h4>
-                            <h2 class="text-4xl font-semibold my-4">Unveiling Our Premises</h2>
-                            <p class="text-white opacity-80 mb-6">Lorem Ipsum is simply dummy text of the printing and
-                                typesetting industry will to become.</p>
-                        </div>
+        <section class="facilities mb-10 bg-[#3D5480] overflow-hidden">
+            <div class="relative max-w-[1320px] mx-auto px-4 sm:px-6 lg:px-8 py-16">
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 items-center">
+                    <div class="text-white">
+                        <h4 class="text-lg font-medium border-b border-white pb-2 inline-block">
+                            Our Facilities
+                        </h4>
+                        <h2 class="text-3xl md:text-4xl font-semibold my-4">
+                            Unveiling Our Premises
+                        </h2>
+                        <p class="text-white opacity-80 mb-6">
+                            Lorem Ipsum is simply dummy text of the printing and typesetting industry will to become.
+                        </p>
                         <div class="space-y-6">
-                            <div class="bg-white rounded-lg p-10 shadow">
-                                <img src="image/Frame.png" alt="" class="w-8 h-8 inline-block mb-3">
+                            <div class="bg-white rounded-lg p-6 shadow hover:shadow-lg transition duration-300">
+                                <img src="image/Frame.png" alt="Chemistry Lab Icon" class="w-8 h-8 inline-block mb-3">
                                 <span class="text-xl font-semibold text-gray-800 mb-2 ml-2">Chemistry Lab</span>
-                                <p class="text-gray-700">A place equipped to conduct scientific experiments or tests or
-                                    to manufacture chemicals, medicines, or the like.</p>
+                                <p class="text-gray-700 mt-2">
+                                    A place equipped to conduct scientific experiments or tests or to manufacture chemicals, medicines, or the like.
+                                </p>
                             </div>
-                            <div class="bg-white rounded-lg p-10 shadow">
-                                <img src="image/Group.png" alt="" class="w-8 h-8 inline-block mb-3">
+                            <div class="bg-white rounded-lg p-6 shadow hover:shadow-lg transition duration-300">
+                                <img src="image/Group.png" alt="Computer Lab Icon" class="w-8 h-8 inline-block mb-3">
                                 <span class="text-xl font-semibold text-gray-800 mb-2 ml-2">Computer Lab</span>
-                                <p class="text-gray-700">A place equipped to conduct scientific experiments or tests or
-                                    to manufacture chemicals, medicines, or the like.</p>
+                                <p class="text-gray-700 mt-2">
+                                    A place equipped to conduct scientific experiments or tests or to manufacture chemicals, medicines, or the like.
+                                </p>
                             </div>
                         </div>
                     </div>
-
-                    <!-- Center Column -->
-                    <div class="col-span-4 space-y-6">
-                        <div class="bg-white rounded-lg p-10 shadow">
-                            <img src="image/Frame (1).png" alt="" class="w-8 h-8 inline-block mb-3">
+                    <div class="space-y-6">
+                        <div class="bg-white rounded-lg p-6 shadow hover:shadow-lg transition duration-300">
+                            <img src="image/Frame (1).png" alt="Playgrounds Icon" class="w-8 h-8 inline-block mb-3">
                             <span class="text-xl font-semibold text-gray-800 mb-2 ml-2">Playgrounds</span>
-                            <p class="text-gray-700">A place equipped to conduct scientific experiments or tests or to
-                                manufacture chemicals, medicines, or the like.</p>
+                            <p class="text-gray-700 mt-2">
+                                A place equipped to conduct scientific experiments or tests or to manufacture chemicals, medicines, or the like.
+                            </p>
                         </div>
-                        <div class="bg-[#3D5480] rounded-lg p-10 shadow">
-                            <img src="image/Frame (2).png" alt="" class="w-8 h-8 inline-block mb-3">
+                        <div class="bg-[#3D5480] rounded-lg p-6 shadow hover:shadow-lg transition duration-300">
+                            <img src="image/Frame (2).png" alt="Classrooms Icon" class="w-8 h-8 inline-block mb-3">
                             <span class="text-xl font-semibold text-white mb-2 ml-2">Classrooms</span>
-                            <p class="text-white opacity-80">A place equipped to conduct scientific experiments or tests
-                                or to manufacture chemicals, medicines, or the like.</p>
+                            <p class="text-white opacity-80 mt-2">
+                                A place equipped to conduct scientific experiments or tests or to manufacture chemicals, medicines, or the like.
+                            </p>
                         </div>
-                        <div class="bg-white rounded-lg p-10 shadow">
-                            <img src="image/Frame (3).png" alt="" class="w-8 h-8 inline-block mb-3">
+                        <div class="bg-white rounded-lg p-6 shadow hover:shadow-lg transition duration-300">
+                            <img src="image/Frame (3).png" alt="Study Halls Icon" class="w-8 h-8 inline-block mb-3">
                             <span class="text-xl font-semibold text-gray-800 mb-2 ml-2">Study Halls</span>
-                            <p class="text-gray-700">A place equipped to conduct scientific experiments or tests or to
-                                manufacture chemicals, medicines, or the like.</p>
+                            <p class="text-gray-700 mt-2">
+                                A place equipped to conduct scientific experiments or tests or to manufacture chemicals, medicines, or the like.
+                            </p>
                         </div>
                     </div>
-
-                    <!-- Right Column -->
-                    <div class="col-span-4">
-                        <div class="bg-white rounded-lg p-10 shadow">
-                            <img src="image/Frame (4).png" alt="" class="w-8 h-8 inline-block mb-3">
+                    <div>
+                        <div class="bg-white rounded-lg p-6 shadow hover:shadow-lg transition duration-300">
+                            <img src="image/Frame (4).png" alt="Book & Library Icon" class="w-8 h-8 inline-block mb-3">
                             <span class="text-xl font-semibold text-gray-800 mb-2 ml-2">Book & Library</span>
-                            <p class="text-gray-700">A place equipped to conduct scientific experiments or tests or to
-                                manufacture chemicals, medicines, or the like.</p>
+                            <p class="text-gray-700 mt-2">
+                                A place equipped to conduct scientific experiments or tests or to manufacture chemicals, medicines, or the like.
+                            </p>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
-
 
         <!-- /// ---- OUR-GALLERY ---- ///  -->
 
-
-        <section>
-            <div class="container max-w-screen-xl mx-auto">
-                <div class="gallery-title text-center">
-                    <span class="text-[#3D5480] border-b border-[#3D5480] font-medium text-lg">Our Gallery</span>
-                    <h2 class="text-5xl text-[#363232] font-bold my-4">Visual <span class="text-[#6BB03A]">Showcase</span></h2>
+        <section class="py-16 bg-gray-100">
+            <div class="container max-w-[1320px] mx-auto px-5">
+                <div class="gallery-title text-center mb-12">
+                    <span class="text-[#3D5480] border-b-2 border-[#3D5480] font-medium text-lg">
+                        Our Gallery
+                    </span>
+                    <h2 class="text-[24px] md:text-5xl text-[#363232] font-bold mt-4">
+                        Visual <span class="text-[#6BB03A]">Showcase</span>
+                    </h2>
                 </div>
-                <div class="grid grid-cols-5 gap-4 ">
+                <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
                     <div class="gallery-items">
                         <div class="gallery-img text-right mb-4">
-                            <img src="image/Rectangle 19404.png" alt="" class="inline-block">
+                            <img src="image/Rectangle 19404.png" alt="Gallery Image 1" class="inline-block">
                         </div>
                         <div>
-                            <img src="image/Rectangle 19396.png" alt="" class="inline-block">
+                            <img src="image/Rectangle 19396.png" alt="Gallery Image 2" class="inline-block">
                         </div>
                     </div>
                     <div class="gallery-items">
                         <div>
-                            <img src="image/Rectangle 19397.png" alt="" class="inline-block">
-                        </div>
-                    </div>
-                    <div class="gallery-items">
-                        <div class="mb-4">
-                            <img src="image/Rectangle 19398.png" alt="" class="inline-block">
-                        </div>
-                        <div>
-                            <img src="image/Rectangle 19402.png" alt="" class="inline-block">
+                            <img src="image/Rectangle 19397.png" alt="Gallery Image 3" class="inline-block">
                         </div>
                     </div>
                     <div class="gallery-items">
                         <div class="mb-4">
-                            <img src="image/Rectangle 19403.png" alt="" class="inline-block">
+                            <img src="image/Rectangle 19398.png" alt="Gallery Image 4" class="inline-block">
                         </div>
                         <div>
-                            <img src="image/Rectangle 19399.png" alt="" class="inline-block">
+                            <img src="image/Rectangle 19402.png" alt="Gallery Image 5" class="inline-block">
                         </div>
                     </div>
                     <div class="gallery-items">
                         <div class="mb-4">
-                            <img src="image/Rectangle 19401.png" alt="" class="inline-block">
+                            <img src="image/Rectangle 19403.png" alt="Gallery Image 6" class="inline-block">
                         </div>
                         <div>
-                            <img src="image/Rectangle 19400.png" alt="" class="inline-block">
+                            <img src="image/Rectangle 19399.png" alt="Gallery Image 7" class="inline-block">
+                        </div>
+                    </div>
+                    <div class="gallery-items">
+                        <div class="mb-4">
+                            <img src="image/Rectangle 19401.png" alt="Gallery Image 8" class="inline-block">
+                        </div>
+                        <div>
+                            <img src="image/Rectangle 19400.png" alt="Gallery Image 9" class="inline-block">
                         </div>
                     </div>
                 </div>
             </div>
         </section>
-
-
 
         <!-- /// ---- OUR-EVENT ---- ///  -->
 
         <section class="py-10">
-            <div class="max-w-screen-xl mx-auto">
+            <div class="max-w-[1320px] mx-auto px-5">
                 <div class="flex flex-wrap items-center">
-                    <div class="w-1/2">
+                    <div class="w-full md:w-1/2">
                         <div class="events-title">
                             <span class="text-[#3D5480] border-b border-[#3D5480] font-medium text-lg">Event</span>
-                            <h2 class="text-5xl text-[#363232] font-bold my-4">Unlock Event <span
+                            <h2 class="text-[24px] md:text-5xl text-[#363232] font-bold my-4">Unlock Event <span
                                     class="text-[#6BB03A]">Excitement</span></h2>
-                            <p class="text-[#535050] text-lg">There are many variations of passages of Lorem Ipsum
+                            <p class="text-[#535050] text-base md:text-lg">There are many variations of passages of Lorem Ipsum
                                 available, but the majority have suffered alteration in some form, by injected humour,
                                 or randomised words.</p>
                             <div class="flex items-end mt-6">
@@ -627,10 +557,10 @@
                             </div>
                         </div>
                     </div>
-                    <div class="w-1/2">
-                        <div class="events-content ml-32 w-[500px]">
+                    <div class="w-full md:w-1/2">
+                        <div class="events-content mt-36 md:mt-0 md:ml-32 md:w-[500px]">
                             <div class="bg-[#DC7823] rounded-2xl">
-                                <ul class="px-8 py-4 shadow-lg rounded-2xl translate-x-3 bg-white">
+                                <ul class="px-3 md:px-8 py-4 shadow-lg rounded-2xl md:translate-x-3 bg-white">
                                     <li class="flex justify-between items-center">
                                         <h6 class="inline-block text-sm text-[#535050] font-medium"><i
                                                 class="fa-solid fa-calendar-days inline-block text-[#DC7823] text-lg mr-2"></i>29/07/2020
@@ -638,9 +568,35 @@
                                         <span class="inline-block text-sm font-medium text-[#6BB03A]">Free</span>
                                     </li>
                                     <li class="my-3">
-                                        <h3 class="text-2xl font-semibold text-[#2F201C]">Digital Transformation
+                                        <h3 class="text-base md:text-2xl font-semibold text-[#2F201C]">Digital Transformation
                                             Conference</h3>
                                     </li>
+                                    <li class="flex md:justify-between items-center">
+                                        <div class="inline-block">
+                                            <img src="image/Ellipse 14.png" alt="" class="inline-block">
+                                            <h5 class="inline-block text-sm font-medium text-[#535050] md:ml-2">Amanda Kern
+                                            </h5>
+                                        </div>
+
+                                        <span class="inline-block text-sm font-medium text-[#535050]"><i
+                                                class="fa-solid fa-location-dot text-[#DC7823] md:text-lg mr-2"></i>43
+                                            Castle road 517 district</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="events-content  md:ml-12 my-10 md:w-[500px]">
+                            <div class="bg-[#DC7823] rounded-2xl">
+                                <ul class="px-3 md:px-8 py-4 shadow-lg rounded-2xl md:translate-x-3 bg-white">
+                                    <li class="flex justify-between items-center">
+                                        <h6 class="inline-block text-sm text-[#535050] font-medium"><i
+                                                class="fa-solid fa-calendar-days inline-block text-[#DC7823] text-lg mr-2"></i>29/07/2020
+                                            11 AMto 15 PM</h6>
+                                        <span class="inline-block text-sm font-medium text-[#6BB03A]">Free</span>
+                                    </li>
+                                    <li class="my-3">
+                                        <h3 class="text-base md:text-2xl font-semibold text-[#2F201C]">Environment Conference</h3>
+                                    </li>
                                     <li class="flex justify-between items-center">
                                         <div class="inline-block">
                                             <img src="image/Ellipse 14.png" alt="" class="inline-block">
@@ -649,15 +605,15 @@
                                         </div>
 
                                         <span class="inline-block text-sm font-medium text-[#535050]"><i
-                                                class="fa-solid fa-location-dot text-[#DC7823] text-lg mr-2"></i>43
+                                                class="fa-solid fa-location-dot text-[#DC7823] md:text-lg mr-2"></i>43
                                             Castle road 517 district</span>
                                     </li>
                                 </ul>
                             </div>
                         </div>
-                        <div class="events-content ml-12 my-10 w-[500px]">
+                        <div class="events-content md:ml-32 md:w-[500px]">
                             <div class="bg-[#DC7823] rounded-2xl">
-                                <ul class="px-8 py-4 shadow-lg rounded-2xl translate-x-3 bg-white">
+                                <ul class="px-3 md:px-8 py-4 shadow-lg rounded-2xl md:translate-x-3 bg-white">
                                     <li class="flex justify-between items-center">
                                         <h6 class="inline-block text-sm text-[#535050] font-medium"><i
                                                 class="fa-solid fa-calendar-days inline-block text-[#DC7823] text-lg mr-2"></i>29/07/2020
@@ -665,33 +621,7 @@
                                         <span class="inline-block text-sm font-medium text-[#6BB03A]">Free</span>
                                     </li>
                                     <li class="my-3">
-                                        <h3 class="text-2xl font-semibold text-[#2F201C]">Environment Conference</h3>
-                                    </li>
-                                    <li class="flex justify-between items-center">
-                                        <div class="inline-block">
-                                            <img src="image/Ellipse 14.png" alt="" class="inline-block">
-                                            <h5 class="inline-block text-sm font-medium text-[#535050] ml-2">Amanda Kern
-                                            </h5>
-                                        </div>
-
-                                        <span class="inline-block text-sm font-medium text-[#535050]"><i
-                                                class="fa-solid fa-location-dot text-[#DC7823] text-lg mr-2"></i>43
-                                            Castle road 517 district</span>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="events-content ml-32 w-[500px]">
-                            <div class="bg-[#DC7823] rounded-2xl">
-                                <ul class="px-8 py-4 shadow-lg rounded-2xl translate-x-3 bg-white">
-                                    <li class="flex justify-between items-center">
-                                        <h6 class="inline-block text-sm text-[#535050] font-medium"><i
-                                                class="fa-solid fa-calendar-days inline-block text-[#DC7823] text-lg mr-2"></i>29/07/2020
-                                            11 AMto 15 PM</h6>
-                                        <span class="inline-block text-sm font-medium text-[#6BB03A]">Free</span>
-                                    </li>
-                                    <li class="my-3">
-                                        <h3 class="text-2xl font-semibold text-[#2F201C]">Campus Clean Workshop</h3>
+                                        <h3 class="text-base md:text-2xl font-semibold text-[#2F201C]">Campus Clean Workshop</h3>
                                     </li>
                                     <li class="flex justify-between items-center">
                                         <div class="inline-block">
@@ -710,7 +640,7 @@
                     </div>
                 </div>
             </div>
-            <div class="btn-event text-center mt-40">
+            <div class="btn-event text-center mt-20 md:mt-40">
                 <a href="" class="bg-[#DC7823] px-8 py-2 rounded-lg inline-block text-white font-medium">All Events</a>
             </div>
         </section>
@@ -718,11 +648,11 @@
         <!-- /// ---- APPLICATION ---- ///  -->
 
         <section class="bg-[#ECD6C44D] mt-10 app pb-24">
-            <div class="max-w-screen-xl mx-auto">
-                <div class="flex items-center">
-                    <div class="w-2/5">
+            <div class="max-w-[1320px] mx-auto px-5">
+                <div class="flex flex-wrap md:flex-nowrap items-center">
+                    <div class="w-full md:w-2/5">
                         <div class="flex items-center mt-28">
-                            <div class="application-img translate-x-20">
+                            <div class="application-img md:translate-x-20">
                                 <img src="image/Group 1000003930.png" alt="">
                             </div>
                             <div class="application-img1 z-10">
@@ -730,13 +660,13 @@
                             </div>
                         </div>
                     </div>
-                    <div class="w-3/5 ml-20">
-                        <div class="app-title mb-14 z-30">
+                    <div class="w-full md:w-3/5 md:ml-20">
+                        <div class="app-title my-10 md:mb-14 z-30 text-center md:text-start">
                             <h2 class="text-5xl font-semibold text-[#6BB03A]">Application</h2>
                             <p class="text-[#2F201C] font-medium text-xl">Programs Within the App.....</p>
                         </div>
-                        <div class="app-inner flex">
-                            <div class="w-[45%]">
+                        <div class="app-inner flex flex-wrap md:flex-nowrap">
+                            <div class="w-full md:w-[45%]">
                                 <div
                                     class="app-items flex items-center border-[#B78D8A] border px-4 py-1 rounded-lg mt-5">
                                     <i class="fa-solid fa-circle-check text-[#6BB03A] text-3xl mr-3"></i>
@@ -763,7 +693,7 @@
                                     <h3 class="text-[#2F201C] text-xl font-medium">Detailed Timetable</h3>
                                 </div>
                             </div>
-                            <div class="w-[55%] ml-5">
+                            <div class="w-full md:w-[55%] md:ml-5">
                                 <div
                                     class="app-items flex items-center border-[#B78D8A] border px-4 py-1 rounded-lg mt-5">
                                     <i class="fa-solid fa-circle-check text-[#6BB03A] text-3xl mr-3"></i>
@@ -791,7 +721,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="btn-app flex mt-16">
+                        <div class="btn-app flex mt-16 text-center md:text-start">
                             <div class="btn-items mr-5">
                                 <a href="">
                                     <img src="image/image 68.png" alt="">
@@ -811,15 +741,15 @@
         <!-- /// ---- OUR-TEAM ---- ///  -->
 
         <section class="mt-12">
-            <div class="max-w-screen-xl mx-auto">
+            <div class="max-w-[1320px] mx-auto px-5">
                 <div class="team-title text-center">
                     <span class="text-[#3D5480] border-b border-[#B6BFCF] font-medium">Our Team</span>
-                    <h2 class="text-5xl font-bold mt-2">Meet Our Expert <span class="text-[#6BB03A]">Trainers</span>
+                    <h2 class="text-[24px] md:text-5xl font-semibold md:font-bold mt-2">Meet Our Expert <span class="text-[#6BB03A]">Trainers</span>
                     </h2>
                 </div>
                 <div class="team-inner text-center mt-14">
-                    <div class="flex items-center">
-                        <div class="w-1/4">
+                    <div class="flex flex-wrap md:flex-nowrap items-center">
+                        <div class="w-full md:w-1/4 ml-4">
                             <div class="team-img">
                                 <img src="image/Rectangle 19453.png" alt="">
                             </div>
@@ -829,7 +759,7 @@
                                 <p class="text-[#3D5480] font-medium">Trainer</p>
                             </div>
                         </div>
-                        <div class="w-1/4 ml-4">
+                        <div class="w-full md:w-1/4 ml-4">
                             <div class="team-img">
                                 <img src="image/Rectangle 19454.png" alt="">
                             </div>
@@ -839,7 +769,7 @@
                                 <p class="text-[#3D5480] font-medium">Trainer</p>
                             </div>
                         </div>
-                        <div class="w-1/4 ml-4">
+                        <div class="w-full md:w-1/4 ml-4">
                             <div class="team-img">
                                 <img src="image/Rectangle 19455.png" alt="">
                             </div>
@@ -849,7 +779,7 @@
                                 <p class="text-[#3D5480] font-medium">Trainer</p>
                             </div>
                         </div>
-                        <div class="w-1/4 ml-4">
+                        <div class="w-full md:w-1/4 ml-4">
                             <div class="team-img">
                                 <img src="image/Rectangle 19456.png" alt="">
                             </div>
@@ -870,14 +800,14 @@
 
     <footer class="bg-[#2F201C] mt-10">
         <div class="text-center footer-title border-b border-white pb-6">
-            <img src="image/logo.jpg" alt="" class="inline-block rounded-lg">
-            <p class="max-w-4xl mx-auto text-white mt-6">Lorem Ipsum is simply dummy text of the printing and
+            <img src="image/logo.jpg" alt="" class="inline-block rounded-br-lg rounded-bl-lg">
+            <p class="max-w-4xl mx-auto text-white mt-6 px-5">Lorem Ipsum is simply dummy text of the printing and
                 typesetting industry. Lorem Ipsum has been the idummy since the 1500s, when an unknown printer took a
                 galley of type and scrambled it to make </p>
         </div>
-        <div class="max-w-screen-xl mx-auto">
-            <div class="flex py-10">
-                <div class="w-1/4">
+        <div class="max-w-[1320px] mx-auto px-5">
+            <div class="flex flex-wrap md:flex-nowrap py-10">
+                <div class="w-1/2 md:w-1/4">
                     <div class="footer-items">
                         <h4 class="text-2xl font-semibold text-white">Explore</h4>
                         <ul class="text-white">
@@ -893,7 +823,7 @@
                             <li class="mt-2">
                                 <a href="">FAQ Questions</a>
                             </li>
-                            <li class="mt-20">
+                            <li class="mt-6 md:mt-20">
                                 <a href="" class="inline-block border-white border px-3 py-1"><i
                                         class="fa-brands fa-telegram"></i></a>
                                 <a href="" class="inline-block border-white border px-3 py-1 mx-1"><i
@@ -905,7 +835,7 @@
                     </div>
                 </div>
 
-                <div class="w-1/4">
+                <div class="w-1/2 md:w-1/4">
                     <div class="footer-items">
                         <h4 class="text-2xl font-semibold text-white">Usefull Links</h4>
                         <ul class="text-white">
@@ -930,12 +860,12 @@
                         </ul>
                     </div>
                 </div>
-                <div class="w-1/4">
-                    <div class="footer-items">
+                <div class="w-full md:w-1/4">
+                    <div class="footer-items md:mr-6 my-6">
                         <h4 class="text-2xl font-semibold text-white">Contact Info</h4>
                         <ul class="text-white">
                             <li class="mt-3">
-                                <div class="flex items-center">
+                                <div class="flex items-center pr-3">
                                     <i class="fa-solid fa-location-dot mr-2 text-2xl"></i>
                                     <p class="">Krushnkunj Society, Nana varachha, Surat - 395006, Gujarat.</p>
                                 </div>
@@ -955,7 +885,7 @@
                         </ul>
                     </div>
                 </div>
-                <div class="w-1/4">
+                <div class="w-full md:w-1/4">
                     <div class="footer-items">
                         <h4 class="text-2xl font-semibold text-white">Recent Post</h4>
                         <ul class="text-white">
@@ -985,9 +915,15 @@
         </div>
     </footer>
 
-
-
     <script src="js/jquery-3.7.1.min.js" type="text/javascript"></script>
+    <script>
+        const menuToggle = document.getElementById('menu-toggle');
+        const menu = document.getElementById('menu');
+        
+        menuToggle.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+        });
+    </script>
 </body>
 
 </html>
